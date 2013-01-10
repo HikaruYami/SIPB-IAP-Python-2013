@@ -1,4 +1,4 @@
-class database:
+class Database:
     def __init__(self):
       self.user_dict = {} #initialize the dictionary that will store all (user, password) pairs
     def add_user(self, username, pword):
