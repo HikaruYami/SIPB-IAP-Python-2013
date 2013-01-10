@@ -1,7 +1,11 @@
 total = 0
-for a in range(1000):
-    if (a % 3 == 0 or a % 5 == 0):
+for a in [2, 3, 5, 6, 7]:
+    if (a % 3 == 0):
         total += a
+    elif (a % 5 == 0):
+        total += a
+    else:
+        pass
 print total
 
 def sumvars(a=3, b=5, c=1000):

@@ -4,6 +4,7 @@ def factorialupto(n=10000):
     a = 1
     count = 1
     while a < n:
+        # print count
         count += 1
         a *= count
     return a / count
