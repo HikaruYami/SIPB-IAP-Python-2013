@@ -1,4 +1,4 @@
-class example_class:
+class ExampleClass:
     def __init__(self):
         self.class_counter = 0
         self.class_list = []
