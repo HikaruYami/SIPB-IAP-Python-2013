@@ -109,6 +109,13 @@ def tell_time():
 def translate(word, dictionary):
     pass
 
+# Excercise 8: First name and last name...
+# Given two lists, one of first names, one of last names, produce a new list
+# with the first and last names properly combined. Bonus points if you can use
+# list comprehension and Python's zip() method. 
+def first_and_last(first_names, last_names):
+    pass
+
 # Exercise N: Building a user database.
 # We're going to fill in the methods of a class that stores, in a dictionary,
 # (username, password) pairs. Because this is just an example, we won't ask
@@ -168,7 +175,11 @@ spanish =  {'hello': 'hola',
 assertEquals(translate('hello', spanish), 'hola', "Translated hello")
 assertEquals(translate('red', spanish), 'rojo', "Translated red")
 assertEquals(translate('teacher', spanish), 'CANNOT TRANSLATE', "PASSED: Excercise 7")
-    
+# 8
+first = ["Ben", "Lisa"]
+last = ["Bitdiddle", "P. Hacker"]
+assertEquals(first_and_last(first, last), ['Ben Bitdiddle', 'Lisa P. Hacker'], "PASSED: Excercise 8")
+
 # N
 db = database()
 assertEquals(db.add_user('fluffy', 'password123'), True, "Successfully added a user")

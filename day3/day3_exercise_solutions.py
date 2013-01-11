@@ -118,6 +118,21 @@ def translate(word, dictionary):
         return dictionary[word]
     return "CANNOT TRANSLATE"
 
+# Excercise 8: First name and last name...
+# Given two lists, one of first names, one of last names, produce a new list
+# with the first and last names properly combined
+def first_and_last(first_names, last_names):
+    names = []
+
+    for i in range(len(first_names)):
+        names.append(first_names[i] + ' ' + last_names[i])
+        # names.append("{} {}".format(first_names[i], last_names[i])
+
+    return names
+
+# List comprhension solution
+# def first_and_last(first_names, last_names):
+#     return ["{} {}".format(first, last) for first, last in zip(first_names, last_names)]
 
 # Exercise N: Building a user database.
 # We're going to fill in the methods of a class that stores, in a dictionary,
@@ -181,6 +196,11 @@ spanish =  {'hello': 'hola',
 assertEquals(translate('hello', spanish), 'hola', "Translated hello")
 assertEquals(translate('red', spanish), 'rojo', "Translated red")
 assertEquals(translate('teacher', spanish), 'CANNOT TRANSLATE', "PASSED: Excercise 7")
+# 8
+first = ["Ben", "Lisa"]
+last = ["Bitdiddle", "P. Hacker"]
+assertEquals(first_and_last(first, last), ['Ben Bitdiddle', 'Lisa P. Hacker'], "PASSED: Excercise 8")
+
 # N
 db = Database()
 assertEquals(db.add_user('fluffy', 'password123'), True, "Successfully added a user")
