@@ -79,6 +79,7 @@ def check_money(items, cash):
         
     return cash
 
+
 # Excercise 5: Find the maximum value...
 # Iterate over the list and find its maximum value, return the value and
 # the index of that value
@@ -98,7 +99,8 @@ def find_max(numbers):
     
     # return the pair as a tuple
     return (max_value, index)
-    
+
+
 # Excercise 6: What time is it?
 # Our time function doesn't work, can you tell us what time it is?
 import time
@@ -106,8 +108,17 @@ import time
 def tell_time():
     return time.strftime('%X %x %Z')
 
+
 # Excercise 7: Dictionaries, and we don't mean those big old books no one knows how to use...
-# 
+# Write a function called translate that takes a word and a foreign language dictionary
+# and checks if we can translate the word, returning the translation if we can, 
+# otherwise return "CANNOT TRANSLATE".
+def translate(word, dictionary):
+    if word in dictionary:
+        return dictionary[word]
+    return "CANNOT TRANSLATE"
+
+
 # Exercise N: Building a user database.
 # We're going to fill in the methods of a class that stores, in a dictionary,
 # (username, password) pairs. Because this is just an example, we won't ask
@@ -155,7 +166,21 @@ assertEquals(check_money(shopping_list, 20.0), 4, "PASSED: Excercise 4")
 # 5
 assertEquals(find_max([1,2,3,10,6,4]), (10, 3), "PASSED: Excercise 5")
 # 6
-print "PASSED: Excercise 6, time is {}".format(tell_time())
+print "Time is {}".format(tell_time())
+print "PASSED: Excercise 6"
+# 7
+spanish =  {'hello': 'hola',
+            'yes': 'si',
+            'one': 'uno',
+            'two': 'dos',
+            'three': 'tres',
+            'red': 'rojo',
+            'black': 'negro',
+            'green': 'verde',
+            'blue': 'azul'}
+assertEquals(translate('hello', spanish), 'hola', "Translated hello")
+assertEquals(translate('red', spanish), 'rojo', "Translated red")
+assertEquals(translate('teacher', spanish), 'CANNOT TRANSLATE', "PASSED: Excercise 7")
 # N
 db = Database()
 assertEquals(db.add_user('fluffy', 'password123'), True, "Successfully added a user")
